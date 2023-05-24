@@ -1,0 +1,6 @@
+Persona {
+    nombre: Ramiro,
+    edad: 26,
+    id: 001,
+    description: Developer,
+}
