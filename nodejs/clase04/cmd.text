@@ -1,0 +1,9 @@
+// Iniciar npm 
+    npm init -y
+// instalar node_modules
+    npm install express
+// ORM para BD
+    // instalar sequelize
+    npm install --save sequelize
+    // BD con la que trabajo
+    npm install --save mysql2

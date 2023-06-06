@@ -16,6 +16,7 @@
 // EJEMPLO EXPRESS
 var express = require('express');
 var app = express();
+var booksController = require('./controllers/booksController');
 
 // La app completa use middleware express.json
 app.use(express.json())
@@ -46,6 +47,7 @@ function middlewareRequestPost(req,res , next) {
     console.log("Middleware")
     let cuerpoSolicitud = req.body;
 
+    // No esta funcionando 
     if (!cuerpoSolicitud.nombre) {
         res.status(400).send("Falta dato nombre")
     } else {

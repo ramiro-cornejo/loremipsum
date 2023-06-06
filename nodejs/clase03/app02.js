@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var booksController = require('./controllers/books');
+var booksController = require('./controllers/booksController');
 
 app.use(express.json());
 
