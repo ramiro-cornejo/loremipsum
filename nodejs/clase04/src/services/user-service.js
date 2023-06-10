@@ -17,12 +17,13 @@ async function getById(id) {
     return user
 }
   
-async function createUser(name, lastname, email) {
+async function createUser(name, lastname, email, password) {
     const user = new User()
   
     user.name = name
     user.lastname = lastname
     user.email = email
+    user.password = password  
   
     const userCreated = await user.save()
     return userCreated

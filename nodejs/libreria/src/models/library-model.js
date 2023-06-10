@@ -1,4 +1,3 @@
-/*
 const { Model, DataTypes } = require('sequelize');
 const { dbInstante } = require('../db/sequelize-config');
 
@@ -30,4 +29,3 @@ Library.init({
 })
 
 module.exports = { Library }
-*/

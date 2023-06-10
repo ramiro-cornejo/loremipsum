@@ -34,7 +34,7 @@ async function editUser(req, res) {
 
   const user = await userService.editUser(id, name, password)
 
-  res.status(201).send(user)
+  res.status(200).send(user)
 }
 
 async function deleteUser(req, res) {
