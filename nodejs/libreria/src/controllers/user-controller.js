@@ -45,4 +45,11 @@ async function deleteUser(req, res) {
   res.status(200).send(`Usuario con el id ${id} ha sido eliminado exitosamente!`)
 }
 
-module.exports = { getAllUsers, getUserById, createUser, editUser, deleteUser }
+async function login(req, res) {
+  const { name, password } = req.body;
+
+  const result = await userService.login(name, password)
+  res.status(200).send(result);
+}
+
+module.exports = { getAllUsers, getUserById, createUser, editUser, deleteUser, login }

@@ -8,5 +8,6 @@ router.get("/user-by-id/:id", userController.getUserById)
 router.post("/create", userController.createUser)
 router.put("/edit/:id", userController.editUser)
 router.delete("/delete/:id", userController.deleteUser)
+router.post("/login", userController.login)
 
 module.exports = router
