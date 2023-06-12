@@ -7,3 +7,6 @@
     npm install --save sequelize
     // BD con la que trabajo
     npm install --save mysql2
+    // Passport (middlewares auth) proteger endpoint/ rutas especificas
+    // instalar passpor | estrategia a usar | libreria node
+    npm install passport passport-jwt jsonwebtoken

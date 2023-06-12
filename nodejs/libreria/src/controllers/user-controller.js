@@ -30,9 +30,9 @@ async function createUser(req, res) {
 
 async function editUser(req, res) {
   const { id } = req.params
-  const { name, password } = req.body;
+  const { name} = req.body;
 
-  const user = await userService.editUser(id, name, password)
+  const user = await userService.editUser(id, name)
 
   res.status(200).send(user)
 }
@@ -45,11 +45,15 @@ async function deleteUser(req, res) {
   res.status(200).send(`Usuario con el id ${id} ha sido eliminado exitosamente!`)
 }
 
-async function login(req, res) {
+async function login(req, res, next) {
   const { name, password } = req.body;
 
-  const result = await userService.login(name, password)
-  res.status(200).send(result);
+  try {
+    const resultado = await userService.login(name, password)
+    res.status(200).send(resultado);
+  } catch(error) {
+    next(error)
+  }
 }
 
 module.exports = { getAllUsers, getUserById, createUser, editUser, deleteUser, login }

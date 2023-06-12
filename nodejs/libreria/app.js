@@ -1,9 +1,12 @@
 const express = require('express')
 const userRoutes  = require('./src/routes/user-routes')
 const { errorHandlerMiddleware } = require('./src/middlewares/error-handler')
+const { initializeAuthentication } = require('./src/authentication/authentication');
 
 const app = express()
 const PORT = 3000
+
+initializeAuthentication()
 
 app.use(express.json())
 app.use('/users', userRoutes)

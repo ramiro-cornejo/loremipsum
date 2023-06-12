@@ -1,3 +1,4 @@
+/*
 const { Model, DataTypes } = require('sequelize');
 const { dbInstance } = require('../db/sequelize-config');
 
@@ -33,3 +34,4 @@ Book.init({
 })
 
 module.exports = { Book }
+*/
