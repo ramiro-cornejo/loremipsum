@@ -45,4 +45,14 @@ async function deleteLibrary(req, res) {
   res.status(200).send(`Libreria con el id ${id} ha sido eliminado exitosamente!`)
 }
 
-module.exports = { getAllLibrary, getLibraryById, createLibrary, editLibrary, deleteLibrary}
+async function auhtLibrary(req, res, next) {
+  const { name, location, telefono } = req.body;
+
+  try {
+    const resultado = await libraryService.auhtLibrary(name, location, telefono)
+    res.status(200).send(resultado);
+  } catch(error) {
+    next(error)
+  }
+}
+module.exports = { getAllLibrary, getLibraryById, createLibrary, editLibrary, deleteLibrary, auhtLibrary}

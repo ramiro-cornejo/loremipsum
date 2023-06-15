@@ -1,28 +1,28 @@
-const { Model, DataTypes } = require('sequelize');
-const { dbInstante } = require('../db/sequelize-config');
+const { Model, DataTypes } = require('sequelize')
+const { dbInstance } = require('../db/sequelize-config')
 
-class Library extends Model{}
+class Library extends Model {}
 
 Library.init({
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
-        autoIncrement: true,
+        autoIncrement: true
     },
     name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: false
     },
     location: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: false
     },
     telefono: {
         type: DataTypes.STRING,
-        allowNull: false,
-    },
+        allowNull: false
+    }
 }, {
-    sequelize: dbInstante,
+    sequelize: dbInstance,
     modelName: 'Library',
     createdAt: false,
     updatedAt: false
