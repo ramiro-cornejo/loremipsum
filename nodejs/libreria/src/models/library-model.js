@@ -25,7 +25,7 @@ Library.init({
     sequelize: dbInstance,
     modelName: 'Library',
     createdAt: false,
-    updatedAt: false
+    updatedAt: false,
 })
 
 module.exports = { Library }

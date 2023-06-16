@@ -1,4 +1,3 @@
-/*
 const { Model, DataTypes } = require('sequelize');
 const { dbInstance } = require('../db/sequelize-config');
 
@@ -26,6 +25,10 @@ Book.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
+    library: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    }
 }, {
     sequelize: dbInstance,
     modelName: 'Book',
@@ -34,4 +37,3 @@ Book.init({
 })
 
 module.exports = { Book }
-*/
