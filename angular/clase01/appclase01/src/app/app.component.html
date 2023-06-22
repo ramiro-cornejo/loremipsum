@@ -1,0 +1,15 @@
+<div class="container">
+  <h1 class="title">Hola, {{username}} te estamos mostrando ejemplos.</h1>
+  <div class="container-tecno">
+    <h2>Listado de Lenguajes de programación</h2>
+    <input placeholder="Ingrese un nuevo lenguaje" type="text" #inpuntNewLanguage>
+
+    <button (click)="addLanguage(inpuntNewLanguage.value)">Agregar</button>
+    <button *ngIf="languageList.length > 0" (click)="removeLanguage()">Remove</button>
+
+    <ul>
+      <li *ngFor="let lang of languageList">{{lang}}</li>
+    </ul>
+  </div>
+</div>
+
