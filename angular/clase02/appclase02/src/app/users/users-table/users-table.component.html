@@ -1,0 +1,14 @@
+<table class="table">
+    <tr class="table-header">
+        <th class="header__item">Nombre</th>
+        <th class="header__item">Apellido</th>
+        <th class="header__item">Email</th>
+        <th class="header__item">Rol</th>
+    </tr>
+    <tr *ngFor="let user of tableUsers" class="table-row">
+        <td class="table-data">{{user.nombre}}</td>
+        <td class="table-data">{{user.apellido}}</td>
+        <td class="table-data">{{user.email}}</td>
+        <td class="table-data">{{user.rol}}</td>
+    </tr>
+</table>

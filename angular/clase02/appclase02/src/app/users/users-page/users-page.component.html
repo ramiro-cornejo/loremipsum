@@ -1,0 +1,4 @@
+<h1>Usuarios</h1>
+
+<input (keyup)="filterUsers(inputFilter.value)" #inputFilter placeholder="Buscar usuario" type="text">
+<app-users-table [tableUsers]="userListFiltered"></app-users-table>

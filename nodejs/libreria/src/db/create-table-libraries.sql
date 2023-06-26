@@ -1,4 +1,4 @@
-CREATE TABLE Library(
+CREATE TABLE Libraries(
     id INT NOT NULL PRIMARY KEY auto_increment,
     name VARCHAR(60) NOT NULL,
     location VARCHAR(60) NOT NULL,
