@@ -1,0 +1,13 @@
+Estructura general de proyecto
+* Modulo CORE
+    -Servicios
+    -Interfaces
+    -HTTPServices
+    -Interceptors
+    -Guards
+* Modulo FEATURE
+    - Paginas de nuestra app(modulos dependiendo a como se comporta el usuario)
+* Modulo SHARED
+    - Componentes compartidos
+    - Directivas
+    - Pipes
