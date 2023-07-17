@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="container">
+    <h1 class="tittle">Lista de Productos</h1>
+
+    <button mat-button (click)="accionLista()">
+        {{ mostrarLista ? 'Ocultar lista' : 'Mostrar lista' }}
+    </button>
+    <div *ngIf="mostrarLista">
+        <ul>
+            <li *ngFor="let producto of productos">{{ producto.nombre }} - {{ producto.costo }}</li>
+        </ul>
+    </div>
+</div>
+
+<app-footer></app-footer>
+
+  
+  
