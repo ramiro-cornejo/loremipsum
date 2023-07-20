@@ -1,1 +1,23 @@
 <app-header titulo="Carrito"></app-header>
+
+<div class="container">
+    <button class="float-end btn btn-primary" routerLink="/carrito/nuevo">Nuevo</button>
+    <table class="table">
+        <thead>
+            <th>Titulo</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let carrito of carritos">
+                <td>{{carrito.title}}</td>
+                <td>{{carrito.description}}</td>
+                <td>{{carrito.price}}</td>
+                <td>
+                    <a routerLink="/carrito/carrito/{{carrito.title}}/{{carrito.price}}">Editar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

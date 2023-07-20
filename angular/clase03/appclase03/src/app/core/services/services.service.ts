@@ -1,11 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, interval, of } from 'rxjs';
 import { Producto } from 'src/app/interface/producto.interface';
+import { Carrito } from '../interface/carrito.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
+  numbers$ = interval(1000); 
+  carritos?: Carrito[];
+
+  constructor(private http: HttpClient) {}
 
   private productos: Producto[] = [
     { nombre: 'Producto 1', costo: '$2000' },
@@ -19,4 +25,10 @@ export class ServicesService {
   getProduct(): Observable<Producto[]> {
     return of(this.productos);
   }
+
+  solicitarProductos(): Observable<Carrito[]> {
+    console.log("Ejecutar consulta")
+    return this.http.get<Array<Carrito>>('https://api.escuelajs.co/api/v1/products')
+    }
 }
+
